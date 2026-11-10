@@ -1,0 +1,4 @@
+@extends('layouts.app', ['title' => 'Giriş yap'])
+@section('content')
+<section class="auth-wrap login-wrap"><div class="auth-intro"><p class="eyebrow">TEKRAR HOŞ GELDİN</p><h1>Ürünlerin<br><em>seni bekliyor.</em></h1><p>Stok miktarlarını ve sipariş durumlarını görmek için hesabına giriş yap.</p></div><form class="panel auth-card" method="POST" action="{{ route('login.store') }}">@csrf<h2>Hesabına giriş yap</h2><label>E-posta<input name="email" type="email" value="{{ old('email') }}" required autocomplete="email"></label><label>Parola<input name="password" type="password" required autocomplete="current-password"></label><label class="check-label"><input name="remember" type="checkbox" value="1"> Bu cihazda oturumu açık tut</label><button class="button primary full" type="submit">Giriş yap <span>↗</span></button><p class="form-foot">İşletmen yok mu? <a href="{{ route('register') }}">Hesap oluştur</a></p></form></section>
+@endsection
